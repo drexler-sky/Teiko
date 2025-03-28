@@ -85,15 +85,23 @@ The statistical analysis indicates that **cd4_t_cells and monocytes** are signif
 | project_id (PK) | SERIAL | Unique project identifier |
 | project_name | VARCHAR(255) | Name of the research project |
 
+#### Subjects Table
+| Column | Type | Description |
+|--------|------|-------------|
+| subject_id | VARCHAR(50) | Unique subject identifier (Primary Key) |
+| age | INTEGER | Age of the subject |
+| sex | VARCHAR(10) | Sex of the subject |
+
 #### Samples Table
 | Column | Type | Description |
 |--------|------|-------------|
 | sample_id (PK) | SERIAL | Unique sample identifier |
 | project_id (FK) | INTEGER | References Projects table |
-| subject_id | VARCHAR(50) | Subject identifier |
-| sample_type | VARCHAR(50) | Sample type (e.g. 'PBMC') |
+| subject_id | VARCHAR(50) | References Subjects table |
+| condition | VARCHAR(255) | Health condition associated with the sample |
+| sample_type | VARCHAR(50) | Type of sample (e.g., 'PBMC') |
 | treatment | VARCHAR(50) | Treatment administered |
-| response | BOOLEAN | Treatment response status |
+| response | BOOLEAN | Treatment response status (true for responders, false for non-responders) |
 | time_from_treatment_start | INTEGER | Days since treatment began |
 
 #### CellCounts Table
@@ -109,6 +117,7 @@ The statistical analysis indicates that **cd4_t_cells and monocytes** are signif
 ### Database Queries
 
 #### 1. Count Subjects per Condition
+
 
     SELECT condition, COUNT(DISTINCT subject_id) AS num_subjects FROM Samples GROUP BY condition;
 
