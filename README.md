@@ -114,6 +114,24 @@ The statistical analysis indicates that **cd4_t_cells and monocytes** are signif
 | nk_cell | INTEGER | Natural Killer cell count |
 | monocyte | INTEGER | Monocyte count |
 
+### Advantages of Using a Database
+
+Capturing and managing our project's data in a database brings several practical benefits:
+
+- **Reliability and Accuracy**: Databases help ensure that our data remains consistent and accurate. This is crucial for research where decisions are based on the data we analyze.
+
+- **Efficient Management**: As our project grows and we collect more data, a database allows us to manage this increase efficiently. We can quickly find and retrieve data when needed without sifting through files manually.
+
+- **Security**: Using a database means we can secure sensitive information more effectively, an essential feature when dealing with personal or confidential data.
+
+- **Scalability**: Databases are designed to handle growth. As we add more data from hundreds or even thousands of samples, our database can handle this without a hitch.
+
+- **Advanced Analysis**: With a database, we can run complex queries to analyze our data deeply, which is indispensable for uncovering insights and trends that simple data handling tools might miss.
+
+- **Collaboration**: A database supports multiple users working on the data at the same time, which is great for team collaboration. It ensures that everyone can work efficiently without interfering with each other's tasks.
+
+By storing our data in a database, we set our project up for smoother operations, more robust analysis, and easier growth management. It’s a foundational step that supports everything from daily tasks to long-term strategic decisions.
+
 ### Database Queries
 
 #### 1. Count Subjects per Condition
