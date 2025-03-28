@@ -137,4 +137,4 @@ The statistical analysis indicates that **cd4_t_cells and monocytes** are signif
 
 ##### c. Gender Distribution
 
-    SELECT su.gender, COUNT(s.sample_id) AS num_samples FROM Samples s JOIN Subjects su ON s.subject_id = su.subject_id WHERE s.condition = 'melanoma' AND s.sample_type = 'PBMC' AND s.time_from_treatment_start = 0 AND s.treatment = 'tr1' GROUP BY su.gender;
+    SELECT su.sex, COUNT(s.sample_id) AS num_samples FROM Samples s JOIN Subjects su ON s.subject_id = su.subject_id WHERE s.condition = 'melanoma' AND s.sample_type = 'PBMC' AND s.time_from_treatment_start = 0 AND s.treatment = 'tr1' GROUP BY su.sex;
